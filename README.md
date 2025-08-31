@@ -1,83 +1,79 @@
-# Sunshine 基地版串流食用指南
-sunshine-foundation 是基于官方nightly分支修改得来，旨在提高各种串流终端设备与windows主机的接入体验。
+# Sunshine Foundation Edition Streaming Guide
+Sunshine-Foundation is based on the official nightly branch and is modified to improve the experience of connecting various streaming devices with a Windows host.
 
 
-## 下载地址
-[Release Sunshine-Foundation v0.1 · qiin2333/Sunshine](https://github.com/qiin2333/Sunshine/releases/foundation)
-[https://mirror.ghproxy.com/https://github.com/qiin2333/Sunshine/releases/download/foundation/sunshine-windows-installer.exe](https://mirror.ghproxy.com/https://github.com/qiin2333/Sunshine/releases/download/foundation/sunshine-windows-installer.exe)
+## Download Links
+[Release Sunshine-Foundation v0.1 · qiin2333/Sunshine](https://github.com/qiin2333/Sunshine/releases/foundation)  
+[Direct Mirror](https://mirror.ghproxy.com/https://github.com/qiin2333/Sunshine/releases/download/foundation/sunshine-windows-installer.exe)
 
 
-
-## 安装
-##### 非首次安装弹出是否卸载旧版
-- 选择是将会清空原有配置信息，以及虚拟显示器的分辨率信息
-- 选择否会保留原有配置信息
-https://docs.gtimg.com/docs-design-resources/individuation/desktop/tmoji/qq_emoji/basic/77_dog_head_qqemoji-91208afa3a.png 21推荐： 否
-##### 安装选项
-- 首次安全推荐组件全部勾上，非首次安装建议如图勾选。
-- IddSampleDriver （虚拟HDR显示器）不支持win10，[win10点击下载非HDR版本虚拟显示器自行安装](https://github.com/itsmikethetech/Virtual-Display-Driver/releases/tag/23.10.20.2)
-https://docs.gtimg.com/docs-design-resources/individuation/desktop/tmoji/qq_emoji/basic/77_dog_head_qqemoji-91208afa3a.png 21推荐： 默认安装目录，不随意更改目录，不安装在中文路径下。
-
-
-## 设置
-##### 配对(pin)
-![image](https://github.com/qiin2333/sunshine-control-panel/assets/2795904/073421a9-f2da-4656-8f4d-6eb3e766c887)
-TODO: 为不同的串流接入设备自动启用指定的配置
+## Installation
+##### Prompt for uninstalling old version if not the first installation
+- Choosing Yes will clear all previous configuration, including virtual display resolutions.
+- Choosing No will keep the previous configuration.  
+21 Recommendation: No
+##### Installation options
+- For first-time installation, it is recommended to select all components; for subsequent installations, select as shown in the image.
+- IddSampleDriver (virtual HDR display) does not support Windows 10. [Click here to download the non-HDR version for Win10](https://github.com/itsmikethetech/Virtual-Display-Driver/releases/tag/23.10.20.2)
+21 Recommendation: Use the default installation directory. Do not change it arbitrarily or install in a path with Chinese characters.
 
 
-
-##### 游戏&应用
-![image (1)](https://github.com/qiin2333/sunshine-control-panel/assets/2795904/d1caf52a-4f26-4aac-b2b9-c6857ddc5f13)
-按图所示添加/编辑游戏的执行路径
-
-21推荐： 使用游戏管理工具 [r](g)来统一管理主机上的所有游戏，这样串流程序只需要指定Playnite。
+## Configuration
+##### Pairing (pin)
+![image](https://github.com/qiin2333/sunshine-control-panel/assets/2795904/073421a9-f2da-4656-8f4d-6eb3e766c887)  
+TODO: Automatically apply specific configuration for different streaming devices.
 
 
-##### 串流显示器行为
-Sunshine 设置 → 视频/音频
+##### Games & Applications
+![image (1)](https://github.com/qiin2333/sunshine-control-panel/assets/2795904/d1caf52a-4f26-4aac-b2b9-c6857ddc5f13)  
+Add or edit game executable paths as shown.
 
-![image (2)](https://github.com/qiin2333/sunshine-control-panel/assets/2795904/a580b32c-2980-426d-bdcd-0c8a5d4563ad)
+21 Recommendation: Use a game management tool [r](g) to manage all games on your host, so the streaming software only needs to point to Playnite.
 
-如图是最佳推荐设置，显示设备指定(Display Device Specify)为可用的虚拟显示器，同时串流准备设置为“停用其他激活指定”，即可实现串流自动息屏物理显示器，退出串流后自动恢复物理显示器。
 
-基地版默认安装的虚拟显示器支持多种分辨率与刷新率，如需要添加修改更多的分辨率可以从菜单上进行修改。
+##### Streaming Display Behavior
+Sunshine Settings → Video/Audio
 
-若使用物理欺骗器需要修改其内置的显示参数可以参考：[你奶奶都能学会的显示器超频指北](https://meowbot.page/2021/09/02/monitor-overclocking/)
+![image (2)](https://github.com/qiin2333/sunshine-control-panel/assets/2795904/a580b32c-2980-426d-bdcd-0c8a5d4563ad)  
+
+Recommended settings: Set the display device to the available virtual display, and set "Deactivate Other Active Specified" to automatically turn off the physical display during streaming and restore it after streaming ends.
+
+The Foundation Edition’s virtual display supports multiple resolutions and refresh rates. Additional resolutions can be added or modified from the menu.
+
+If using a physical EDID emulator, you can modify its display parameters. Reference: [Monitor Overclocking Guide](https://meowbot.page/2021/09/02/monitor-overclocking/)
+
 
 ##### HDR
-- 一般 HDR 支持信息和要求：
-    - HDR 必须在主机操作系统中激活，需要连接到主机 PC 的支持 HDR 的显示器（虚拟）或 EDID 显卡欺骗器。
-    - 您还必须在 Moonlight 客户端设置中启用 HDR 选项，否则数据流将是 SDR 格式（如果主机是 HDR 格式，则可能曝光过度）。
-    - 良好的 HDR 体验有赖于操作系统和游戏中正确的 HDR 显示校准。客户端和主机显示器的 HDR 校准可能会有很大不同。
-支持编码 HEVC Main 10 或 AV1 10 位配置文件的英特尔、AMD 和英伟达™（NVIDIA®）图形处理器均支持 HDR 流媒体。
+- HDR requirements:
+    - HDR must be enabled on the host OS and connected to a host PC supporting HDR (virtual display or EDID emulator).
+    - You must also enable HDR in the Moonlight client, otherwise the stream will be in SDR (HDR host may be overexposed).
+    - Good HDR experience depends on correct HDR calibration on the OS and in games. Calibration may differ between host and client.
+Intel, AMD, and NVIDIA GPUs supporting HEVC Main 10 or AV1 10-bit profiles support HDR streaming.
 
-21推荐： 通过将 [r](g)串流到客户端设备来校准显示屏，并保存 HDR 校准配置文件，以便在串流时使用。
-## 高级用法
-##### 超采样串流
-方法一：使用 威力加强版 Moonlight-Android 调整主机缩放比例。
+21 Recommendation: Calibrate your display through [r](g) streaming to the client and save the HDR calibration profile for streaming use.
 
-方法二：Sunshine 设置 → 视频/音频 → Display device options → Remap display modes。
+
+## Advanced Usage
+##### Supersampling Streaming
+Method 1: Use Moonlight-Android Enhanced to adjust host scaling ratio.  
+Method 2: Sunshine Settings → Video/Audio → Display device options → Remap display modes.
+
 
 ## Q&A
-Q: sunshine串流不能显示XBOXGAMEBAR
+Q: Sunshine streaming cannot display XBOX GAMEBAR
 
-A: 设置 → 高级 → Force a Specific Capture Method → WGC，您可能需要停止服务并手动运行可执行文件才能测试新的捕获路径，像下面这样的简单批处理脚本就可以工作。
+A: Go to Settings → Advanced → Force a Specific Capture Method → WGC. You may need to stop the service and manually run the executable to test the new capture path. A simple batch script like below works:
 
 ```powershell
 cd /d "c:\program files\sunshine"
 net stop sunshineservice
 sunshine.exe
-```
+````
 
+## Related Resources
 
-## 相关资源
-[https://www.bilibili.com/video/BV1xu4y1M7yq/](https://www.bilibili.com/video/BV1xu4y1M7yq/)
-
-[Sunshine官方文档](https://docs.lizardbyte.dev/projects/sunshine/en/latest/index.html)
-
-[串流设备解码性能 - Moonlight Game Streaming Project](https://docs.qq.com/sheet/DSGxMdUl0UVZCeFRQ?tab=BB08J2)
-
-[解锁杜比全景声串流](https://docs.qq.com/pdf/DSEFKbExvRXRzVktF)
-
-[moonlight-android 威力加强版](https://github.com/qiin2333/moonlight-android/releases/shortcut)
-
+[Video Guide](https://www.bilibili.com/video/BV1xu4y1M7yq/)
+[Sunshine Official Documentation](https://docs.lizardbyte.dev/projects/sunshine/en/latest/index.html)
+[Streaming Device Decoding Performance - Moonlight Project](https://docs.qq.com/sheet/DSGxMdUl0UVZCeFRQ?tab=BB08J2)
+[Unlock Dolby Atmos Streaming](https://docs.qq.com/pdf/DSEFKbExvRXRzVktF)
+[Moonlight-Android Enhanced Edition](https://github.com/qiin2333/moonlight-android/releases/shortcut)
