@@ -3,7 +3,9 @@ Sunshine-Foundation is based on the official nightly branch and is modified to i
 
 
 ## Download Links
+
 [Release Sunshine-Foundation v0.1 · qiin2333/Sunshine](https://github.com/qiin2333/Sunshine/releases/foundation)  
+
 [Direct Mirror](https://mirror.ghproxy.com/https://github.com/qiin2333/Sunshine/releases/download/foundation/sunshine-windows-installer.exe)
 
 
@@ -73,7 +75,11 @@ sunshine.exe
 ## Related Resources
 
 [Video Guide](https://www.bilibili.com/video/BV1xu4y1M7yq/)
+
 [Sunshine Official Documentation](https://docs.lizardbyte.dev/projects/sunshine/en/latest/index.html)
+
 [Streaming Device Decoding Performance - Moonlight Project](https://docs.qq.com/sheet/DSGxMdUl0UVZCeFRQ?tab=BB08J2)
+
 [Unlock Dolby Atmos Streaming](https://docs.qq.com/pdf/DSEFKbExvRXRzVktF)
+
 [Moonlight-Android Enhanced Edition](https://github.com/qiin2333/moonlight-android/releases/shortcut)
