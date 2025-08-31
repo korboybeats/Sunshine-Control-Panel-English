@@ -103,14 +103,14 @@ function createTray() {
 
     const contextMenu = Menu.buildFromTemplate([
       {
-        label: '设置虚拟显示器（vdd)',
+        label: 'Set Up Virtual Display (vdd)',
         click: () => {
           const subWin = createSubBrowserWin(null, win)
           subWin.loadFile(join(__dirname, '../renderer/vdd/index.html'))
         },
       },
       {
-        label: '退出程序',
+        label: 'Exit',
         click: () => {
           app.isQuiting = true
           app.quit()
@@ -235,7 +235,7 @@ app.whenReady().then(async () => {
   session.defaultSession.webRequest.onBeforeRequest(filter, (details, cb) => {
     if (details.url.startsWith('https://translate-pa.googleapis.com/v1/supportedLanguages')) {
       cb({
-        redirectURL: `https://qiin2333.github.io/sunshine-control-panel/src/main/static/supportedLanguages.js`,
+        redirectURL: `https://qiin2333.github.io/Sunshine-Control-Panel-English/src/main/static/supportedLanguages.js`,
       })
     } else {
       cb({ requestHeaders: details.requestHeaders })
