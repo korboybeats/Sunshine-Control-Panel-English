@@ -1,10 +1,10 @@
 <template>
   <div class="vdd-settings">
-    <h2>虚拟显示器设置</h2>
+    <h2>Virtual Display Settings</h2>
 
     <el-form :model="settings" label-width="120px">
       <!-- 分辨率设置 -->
-      <el-form-item label="分辨率预置">
+      <el-form-item label="Resolutions">
         <div class="setting-content">
           <el-tag v-for="res in resolutionOptions" :key="res" closable @close="removeResolution(res)" class="mx-1">
             {{ res }}
@@ -29,13 +29,13 @@
               }
             "
           >
-            + 新增分辨率
+            + Add resolution
           </el-button>
         </div>
       </el-form-item>
 
       <!-- 显卡设置 -->
-      <el-form-item label="GPU绑定">
+      <el-form-item label="GPU Selection">
         <div class="setting-content">
           <el-select
             v-model="gpuFriendlyName"
@@ -52,12 +52,12 @@
       </el-form-item>
 
       <!-- 显示器数量 -->
-      <el-form-item label="显示器数量">
+      <el-form-item label="Number of Monitors">
         <el-input-number v-model="settings.monitors[0].count" :min="1" :max="1" />
       </el-form-item>
 
       <!-- 刷新率设置 -->
-      <el-form-item label="刷新率预置">
+      <el-form-item label="Refresh Rates">
         <div class="setting-content">
           <el-tag v-for="rate in refreshRateOptions" :key="rate" closable @close="removeRefreshRate(rate)" class="mx-1">
             {{ rate }}Hz
@@ -82,7 +82,7 @@
               }
             "
           >
-            + 新增刷新率
+            + Add refresh rate
           </el-button>
         </div>
       </el-form-item>
@@ -98,7 +98,7 @@
       </el-form-item>
 
       <!-- 色彩模式 -->
-      <el-form-item label="色彩模式">
+      <el-form-item label="Color Mode">
         <el-select v-model="settings.colour[0].ColourFormat" placeholder="请选择色彩模式" style="width: 160px">
           <el-option label="RGB" value="RGB" />
           <el-option label="YCbCr444" value="YCbCr444" />
@@ -108,13 +108,13 @@
       </el-form-item>
 
       <!-- 日志 -->
-      <el-form-item label="日志">
+      <el-form-item label="Logging">
         <el-switch v-model="settings.logging[0].logging" />
       </el-form-item>
 
       <!-- 保存按钮 -->
       <el-form-item>
-        <el-button type="primary" @click="saveSettings">保存设置</el-button>
+        <el-button type="primary" @click="saveSettings">Save</el-button>
       </el-form-item>
     </el-form>
   </div>
